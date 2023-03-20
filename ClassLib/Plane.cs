@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace ClassLib
 {
-    public class Car
+    public class Plane
     {
         public int ID { get; set; }
-        public string Name { get; set; }
+        public string Type { get; set; }
         public int RegNumber { get; set; }
     }
 }

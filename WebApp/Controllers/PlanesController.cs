@@ -1,26 +1,24 @@
 ﻿using ClassLib;
-using Microsoft.Ajax.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using System.Xml.Linq;
 
 namespace WebApp.Controllers
 {
-    public class CarsController : ApiController
+    public class PlanesController : ApiController
     {
         private DBLayer dbl = new DBLayer();
-        public IEnumerable<Car> Get()
+        public IEnumerable<Plane> Get()
         {
-            return (IEnumerable<Car>)dbl.GetAllCars();
+            return (IEnumerable<Plane>)dbl.GetAllPlanes();
         }
 
-        public IEnumerable<Car> Get(int id)
+        public IEnumerable<Plane> Get(int id)
         {
-            return (IEnumerable<Car>)dbl.GetAllCars().Where(i => i.ID == id);
+            return (IEnumerable<Plane>)dbl.GetAllPlanes().Where(i=> i.ID == id);
         }
         public string Get(int id, int id2)
         {
